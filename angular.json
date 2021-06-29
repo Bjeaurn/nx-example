@@ -1,6 +1,69 @@
 {
   "version": 1,
   "projects": {
+    "circ-a": {
+      "root": "libs/circ-a",
+      "sourceRoot": "libs/circ-a/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/circ-a/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/circ-a"],
+          "options": {
+            "jestConfig": "libs/circ-a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-a": {
+      "root": "libs/lib-a",
+      "sourceRoot": "libs/lib-a/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/lib-a/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib-a"],
+          "options": {
+            "jestConfig": "libs/lib-a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lib-b": {
+      "root": "libs/lib-b",
+      "sourceRoot": "libs/lib-b/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/lib-b/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib-b"],
+          "options": {
+            "jestConfig": "libs/lib-b/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web": {
       "projectType": "application",
       "root": "apps/web",

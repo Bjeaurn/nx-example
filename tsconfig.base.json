@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@circ-dep-test/circ-a": ["libs/circ-a/src/index.ts"],
+      "@circ-dep-test/lib-a": ["libs/lib-a/src/index.ts"],
+      "@circ-dep-test/lib-b": ["libs/lib-b/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
